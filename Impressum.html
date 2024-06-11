@@ -1,0 +1,125 @@
+<!DOCTYPE html><html data-bs-theme="dark" lang="en"><head><meta charset="utf-8">
+<script>
+      (function(d,t) {
+        var BASE_URL="https://app.chatwoot.com";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'eEG8BmELHXQRHvctxFQbAb81',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>VAAX Creative Studios</title><meta property="og:image" content="https://va.ax/assets/img/Banner.jpg"><meta name="twitter:description" content="WHERE IMAGINATION MEETS INNOVATION"><meta property="og:type" content="website"><meta name="description" content="WHERE IMAGINATION MEETS INNOVATION"><meta name="twitter:title" content="VAAX Creative Studios"><meta name="twitter:card" content="summary">
+			<script>
+(function() {
+
+	// JavaScript snippet handling Dark/Light mode switching
+
+	const getStoredTheme = () => localStorage.getItem('theme');
+	const setStoredTheme = theme => localStorage.setItem('theme', theme);
+	const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+	const getPreferredTheme = () => {
+
+		if (forcedTheme) return forcedTheme;
+
+		const storedTheme = getStoredTheme();
+		if (storedTheme) {
+			return storedTheme;
+		}
+
+		const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+		if (pageTheme) {
+			return pageTheme;
+		}
+
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	}
+
+	const setTheme = theme => {
+		if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			document.documentElement.setAttribute('data-bs-theme', 'dark');
+		} else {
+			document.documentElement.setAttribute('data-bs-theme', theme);
+		}
+	}
+
+	setTheme(getPreferredTheme());
+
+	const showActiveTheme = (theme, focus = false) => {
+		const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+		if (!themeSwitchers.length) return;
+
+		document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+			element.classList.remove('active');
+			element.setAttribute('aria-pressed', 'false');
+		});
+
+		for (const themeSwitcher of themeSwitchers) {
+
+			const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+			if (btnToActivate) {
+				btnToActivate.classList.add('active');
+				btnToActivate.setAttribute('aria-pressed', 'true');
+			}
+		}
+	}
+
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+		const storedTheme = getStoredTheme();
+		if (storedTheme !== 'light' && storedTheme !== 'dark') {
+			setTheme(getPreferredTheme());
+		}
+	});
+
+	window.addEventListener('DOMContentLoaded', () => {
+		showActiveTheme(getPreferredTheme());
+
+		document.querySelectorAll('[data-bs-theme-value]')
+			.forEach(toggle => {
+				toggle.addEventListener('click', (e) => {
+					e.preventDefault();
+					const theme = toggle.getAttribute('data-bs-theme-value');
+					setStoredTheme(theme);
+					setTheme(theme);
+					showActiveTheme(theme);
+				})
+			})
+	});
+})();
+</script><link rel="icon" type="image/svg+xml" sizes="188x195" href="assets/img/LogoSingleBlack.svg"><link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="assets/fonts/font-awesome.min.css"><link rel="stylesheet" href="assets/css/styles.min.css"></head><body style="color: var(--bs-body-color);background: var(--bs-body-bg);"><nav class="navbar navbar-expand-md fixed-top navbar-light" id="mainNav" style="height: 80px;"><div class="container"><a class="navbar-brand d-xxl-flex align-items-xxl-center" href="#"><div class="brand-logo"></div>VAAX <span style="font-weight: normal !important;">&nbsp;Creative Studios</span></a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button><div class="collapse navbar-collapse" id="navbarResponsive" style="height: 56px;"><ul class="navbar-nav ms-auto" style="height: 40px;"><li class="nav-item nav-link" style="padding: 2px;padding-left: 10px;padding-right: 10px;"><a class="nav-link active" href="index.html#about">About</a></li><li class="nav-item nav-link" style="padding: 2px;padding-left: 10px;padding-right: 10px;"><a class="nav-link" href="index.html#missionvalues">Mission &amp; Values</a></li><li class="nav-item nav-link" style="padding: 2px;padding-left: 10px;padding-right: 10px;"><a class="nav-link" href="index.html#contact">contact</a></li><li class="nav-item nav-link" style="padding: 2px;padding-left: 10px;padding-right: 10px;"><a class="nav-link" href="jobs.html">Jobs</a></li><li class="nav-item nav-link" style="padding: 2px;padding-left: 10px;padding-right: 10px;"><a class="nav-link" href="Impressum.html">Impressum</a></li><li class="nav-item text-bg-light bg-body nav-link" style="padding: 2px;border-radius: 41px;padding-left: 10px;padding-right: 10px;color: initial;"><a class="nav-link text-center link-dark" onclick="ContactBtn()" style="cursor: pointer;">Contact</a></li><li class="nav-item d-xxl-flex align-items-xxl-center nav-link" style="padding: 2px;padding-left: 10px;padding-right: 10px;"><div class="theme-switcher nav-item dropdown d-xxl-flex"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+  <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</svg></a><div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+  <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+  <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+  <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+  <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+</svg>Auto</a></div></div></li></ul></div></div></nav><header class="masthead" style="height: 416.5px;background: url(&quot;assets/img/bg03.jpg&quot;) right top / cover;"><div class="intro-body" style="height: auto;"><div class="container"><div class="row"><div class="col-lg-8 mx-auto"><h1 class="brand-heading" style="font-size: 50px;"><strong>Where Imagination Meets Innovation</strong></h1></div></div></div></div></header><section class="text-center content-section"><div class="container"><div class="row"><div class="col-lg-8 text-start mx-auto"><h2>Impressum</h2>
+<p>Angaben gemäß § 5 TMG</p><p>VAAX Creative Studios<br> 
+Wuppertaler Str. 76<br> 
+45549 Sprockhövel <br> 
+</p><p> <strong>Vertreten durch: </strong><br>
+Valentin Winkelmann<br>
+</p><p><strong>Kontakt:</strong> <br>
+Telefon: 02324-3444414<br>
+E-Mail: <a href='mailto:info@va.ax'>info@va.ax</a></br></p><p><strong>Haftungsausschluss: </strong><br><br><strong>Haftung für Inhalte</strong><br><br>
+Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.<br><br><strong>Haftung für Links</strong><br><br>
+Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.<br><br><strong>Urheberrecht</strong><br><br>
+Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.<br><br><strong>Datenschutz</strong><br><br>
+Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. <br>
+Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. <br>
+Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.<br>
+<br><br><strong>Google Analytics</strong><br><br>
+Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. (''Google''). Google Analytics verwendet sog. ''Cookies'', Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglicht. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website (einschließlich Ihrer IP-Adresse) wird an einen Server von Google in den USA übertragen und dort gespeichert. Google wird diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen. Auch wird Google diese Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre IP-Adresse mit anderen Daten der Google in Verbindung bringen. Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website voll umfänglich nutzen können. Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.</p><br> 
+Website Impressum von <a href="https://www.impressum-generator.de">impressum-generator.de</a>
+     </div></div></div></section><footer style="color: var(--bs-body-color);"><div class="container text-center"><p>Copyright ©&nbsp;VAAX Creative Studios<br><a href="Impressum.html">Impressum</a>&nbsp;| <a href="privacy.html">Privacy</a><br><strong>Made with 💛 by Humans</strong></p></div></footer><script src="assets/bootstrap/js/bootstrap.min.js"></script><script src="assets/js/script.min.js"></script></body></html>
